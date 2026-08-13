@@ -35,7 +35,7 @@ function MiniProject() {
 
     return (
         <>
-            <div className="card m-4 p-3 border bg-dark rounded">
+            <div className="card m-4 p-3 border bg-light rounded">
                 <input
                     type="text"
                     className="form-control w-50 h-50 m-5 p-3 bg-light border-dark"
