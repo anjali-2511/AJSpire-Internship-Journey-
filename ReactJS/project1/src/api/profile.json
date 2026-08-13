@@ -1,0 +1,30 @@
+[
+    {
+      "name": "Alice",
+      "age": 30,
+      "greeting": "Hi Alice, have a wonderful day!",
+      "hobbies": ["Reading", "Hiking"],
+      "hasContactButton": true
+    },
+    {
+      "name": "Bob",
+      "age": 25,
+      "greeting": "Hello Bob, keep up the great work!",
+      "hobbies": ["Gaming", "Cooking"],
+      "hasContactButton": true
+    },
+    {
+      "name": "Charlie",
+      "age": 28,
+      "greeting": "Hey Charlie, hope you're doing great!",
+      "hobbies": ["Photography", "Traveling"],
+      "hasContactButton": true
+    },
+    {
+      "name": "Diana",
+      "age": 34,
+      "greeting": "Hi Diana, wishing you a productive day!",
+      "hobbies": ["Painting", "Yoga"],
+      "hasContactButton": true
+    }
+]

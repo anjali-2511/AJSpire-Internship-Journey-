@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+     <div class="card1">
+        <form action="">
+            <div class="text">
+                <h1>Registration</h1>
+            </div>
+            <label for="name">Full Name: </label>
+            <input type="text" placeholder="Enter Your FullName">
+            <label for="name">Roll No: </label>
+            <input type="text" placeholder="Enter Your RollNo">
+            <br>
+            <br>
+            <label for="name">Email: </label>
+            <input type="text" placeholder="Enter Your Email">
+            <label for="name">Mob No: </label>
+            <input type="text" placeholder="Enter Your MobNo">
+            <br>
+            <br>
+            <label for="name">Age: </label>
+            <input type="text" placeholder="Enter Your Age">
+            <label for="name">Gender: </label>
+            <select name="" id="">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
+
+            <br>
+            <br>
+
+            <div class="submit"> 
+                <button> 
+                    Submit
+                </button>
+               
+            </div>
+
+        </form>
+    </div>
+
+    <div class="card2">
+        <h1>Product Details</h1>
+
+    <form>
+
+        <!-- Purchase Section -->
+        <fieldset>
+            <legend>Purchase</legend>
+
+            <label>Product Name :</label><br>
+            <select>
+                <option>Quantity</option>
+                <option>Laptop</option>
+                <option>Mobile</option>
+                <option>Tablet</option>
+            </select><br><br>
+
+            <input type="text">
+        </fieldset>
+
+        <!-- Personal Details -->
+        <fieldset>
+            <legend>Personal details</legend>
+
+            <label>First Name :</label><br>
+            <input type="text"><br><br>
+
+            <label>Last Name :</label><br>
+            <input type="text">
+        </fieldset>
+
+        <!-- Credit Card Details -->
+        <fieldset>
+            <legend>Credit Card Details</legend>
+
+            <label>Credit Card Type</label><br>
+
+            <input type="checkbox"> Visa <br>
+            <input type="checkbox"> Mastercard <br><br>
+
+            <label>Credit Card Number :</label><br>
+            <input type="text"><br><br>
+
+            <label>Expiry Date :</label><br>
+            <input type="text">
+        </fieldset>
+
+        <!-- Billing Information -->
+        <fieldset>
+            <legend>Billing Information</legend>
+
+            <label>Postal Address :</label><br>
+            <textarea rows="4"></textarea><br><br>
+
+            <label>Home Address :</label>
+            <input type="checkbox"> Same as above <br><br>
+
+            <textarea rows="4"></textarea>
+        </fieldset>
+
+        <button type="submit">Place my order</button>
+
+    </form>
+
+</div>
+</body>
+</html>

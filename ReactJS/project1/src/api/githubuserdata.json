@@ -1,0 +1,146 @@
+[
+  {
+    "id": 1,
+    "username": "raj_coder",
+    "name": "Raj Malhotra",
+    "city": "Mumbai",
+    "email": "raj.malhotra@example.com",
+    "followers": 245
+  },
+  {
+    "id": 2,
+    "username": "priya_dev",
+    "name": "Priya Nair",
+    "city": "Bangalore",
+    "email": "priya.nair@example.com",
+    "followers": 512
+  },
+  {
+    "id": 3,
+    "username": "rohan_js",
+    "name": "Rohan Kapoor",
+    "city": "Delhi",
+    "email": "rohan.kapoor@example.com",
+    "followers": 89
+  },
+  {
+    "id": 4,
+    "username": "sneha_react",
+    "name": "Sneha Iyer",
+    "city": "Chennai",
+    "email": "sneha.iyer@example.com",
+    "followers": 378
+  },
+  {
+    "id": 5,
+    "username": "karan_py",
+    "name": "Karan Verma",
+    "city": "Pune",
+    "email": "karan.verma@example.com",
+    "followers": 156
+  },
+  {
+    "id": 6,
+    "username": "ananya_web",
+    "name": "Ananya Reddy",
+    "city": "Hyderabad",
+    "email": "ananya.reddy@example.com",
+    "followers": 623
+  },
+  {
+    "id": 7,
+    "username": "vikram_node",
+    "name": "Vikram Singh",
+    "city": "Jaipur",
+    "email": "vikram.singh@example.com",
+    "followers": 47
+  },
+  {
+    "id": 8,
+    "username": "ishita_ui",
+    "name": "Ishita Joshi",
+    "city": "Ahmedabad",
+    "email": "ishita.joshi@example.com",
+    "followers": 289
+  },
+  {
+    "id": 9,
+    "username": "aditya_data",
+    "name": "Aditya Kulkarni",
+    "city": "Nagpur",
+    "email": "aditya.kulkarni@example.com",
+    "followers": 134
+  },
+  {
+    "id": 10,
+    "username": "meera_ml",
+    "name": "Meera Desai",
+    "city": "Surat",
+    "email": "meera.desai@example.com",
+    "followers": 401
+  },
+  {
+    "id": 11,
+    "username": "arjun_go",
+    "name": "Arjun Sharma",
+    "city": "Lucknow",
+    "email": "arjun.sharma@example.com",
+    "followers": 72
+  },
+  {
+    "id": 12,
+    "username": "kavya_rust",
+    "name": "Kavya Rao",
+    "city": "Kochi",
+    "email": "kavya.rao@example.com",
+    "followers": 210
+  },
+  {
+    "id": 13,
+    "username": "devansh_cpp",
+    "name": "Devansh Gupta",
+    "city": "Indore",
+    "email": "devansh.gupta@example.com",
+    "followers": 65
+  },
+  {
+    "id": 14,
+    "username": "nisha_java",
+    "name": "Nisha Pillai",
+    "city": "Bhopal",
+    "email": "nisha.pillai@example.com",
+    "followers": 340
+  },
+  {
+    "id": 15,
+    "username": "yash_swift",
+    "name": "Yash Agarwal",
+    "city": "Chandigarh",
+    "email": "yash.agarwal@example.com",
+    "followers": 98
+  },
+  {
+    "id": 16,
+    "username": "riya_flutter",
+    "name": "Riya Chatterjee",
+    "city": "Kolkata",
+    "email": "riya.chatterjee@example.com",
+    "followers": 567
+  },
+  {
+    "id": 17,
+    "username": "siddharth_php",
+    "name": "Siddharth Rao",
+    "city": "Patna",
+    "email": "siddharth.rao@example.com",
+    "followers": 23
+  },
+  {
+    "id": 18,
+    "username": "tanvi_kotlin",
+    "name": "Tanvi Bhatt",
+    "city": "Nashik",
+    "email": "tanvi.bhatt@example.com",
+    "followers": 189
+  }
+]

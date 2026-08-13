@@ -1,0 +1,101 @@
+*{
+    
+
+}
+.card1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(241, 241, 204);
+    padding: 20px;
+    margin: 300px;
+    border-radius: 23px;
+    box-shadow: limegreen;
+    
+
+
+}
+.card1 .text{
+    margin-left: 300px;
+    padding: 20px;
+    color: blueviolet;
+    margin-left: 60px;
+}
+
+.submit button{
+    margin: 20px;
+    margin-left: 200px;
+    padding: 10px;
+    border-width: 2px;
+    color: black;
+    size: 90px;
+    background-color: rgba(137, 43, 226, 0.377);
+    border-radius: 10px;
+    box-shadow: limegreen;
+     
+    
+}
+
+
+body {
+    background-color: #8091e6a2;
+    font-family: Arial, sans-serif;
+}
+
+.card2 {
+    width: 480px;
+    margin: 30px auto;
+    padding: 20px;
+    border: 2px solid #9415b465;
+    background-color: rgb(218, 218, 174);
+    border-radius: 15px
+}
+
+fieldset {
+    border: 1px solid #918f8f;
+    margin-bottom: 15px;
+    padding: 10px;
+}
+
+legend {
+    font-size: 13px;
+    color: #000;
+}
+
+label {
+    font-size: 12px;
+}
+
+input[type="text"],
+select {
+    width: 120px;
+    height: 20px;
+    margin-top: 3px;
+}
+
+textarea {
+    width: 210px;
+    resize: none;
+}
+
+button {
+    font-size: 11px;
+    padding: 3px 8px;
+    cursor: pointer;
+}
+
+.registration{
+    width: 800px;
+    padding: 20px;
+    background-color: rgb(245, 211, 211);
+    border-radius: 15px;
+    border: 2px solid rgba(0, 0, 0, 0.767);
+}
+
+.survey{
+    background-color: rgb(207, 233, 241);
+    border-radius: 15px;
+    border: 2px solid rgba(0, 0, 0, 0.733);
+    width: 500px;
+}
+

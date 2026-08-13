@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Registration Form -->
+<form class="registration">
+    <h1><u>Register now while seats are available!</u></h1>
+
+    <table width="100%">
+        <tr>
+            <td>First Name *</td>
+            <td><input type="text"></td>
+
+            <td>Meal Preference</td>
+            <td>
+                <select>
+                    <option>Vegetarian</option>
+                    <option>Non-Vegetarian</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Last Name *</td>
+            <td><input type="text"></td>
+        </tr>
+
+        <tr>
+            <td>Company/Institution *</td>
+            <td><input type="text"></td>
+
+            <td><u>Payment Details</u></td>
+        </tr>
+
+        <tr>
+            <td>Address *</td>
+            <td><textarea rows="5" cols="25"></textarea></td>
+
+            <td>Payment Mode</td>
+            <td>
+                <input type="checkbox"> Cash<br>
+                <input type="checkbox"> Cheque<br>
+                <input type="checkbox"> Demand Draft
+            </td>
+        </tr>
+
+        <tr>
+            <td>City</td>
+            <td><input type="text"></td>
+
+            <td>DD/Cheque No.</td>
+            <td><input type="text"></td>
+        </tr>
+
+        <tr>
+            <td>State / Province / Region</td>
+            <td>
+                <select>
+                    <option>-Select-</option>
+                </select>
+            </td>
+
+            <td>Drawn On (Bank Name)</td>
+            <td><input type="text"></td>
+        </tr>
+
+        <tr>
+            <td>Country</td>
+            <td>
+                <select>
+                    <option>-Select-</option>
+                </select>
+            </td>
+
+            <td>Payable at</td>
+            <td><input type="text"></td>
+        </tr>
+
+        <tr>
+            <td>Email *</td>
+            <td><input type="email"></td>
+        </tr>
+
+        <tr>
+            <td>Phone Number *</td>
+            <td><input type="text"></td>
+        </tr>
+
+        <tr>
+            <td colspan="4" align="center">
+                <input type="submit" value="Submit">
+                <input type="reset" value="Reset">
+            </td>
+        </tr>
+    </table>
+
+</form>
+
+<br>
+<br>
+
+<!-- Survey Form -->
+
+<form class="survey">
+<ul>
+
+<li>
+    Name:
+    <input type="text">
+</li>
+
+<li>
+    Email:
+    <input type="email">
+</li>
+
+<li>
+    Password:
+    <input type="password">
+</li>
+
+<br>
+
+<li>
+    Please check all the emotions that apply to you:
+    <ul>
+        <li>Angry <input type="checkbox"></li>
+        <li>Sad <input type="checkbox"></li>
+        <li>Happy <input type="checkbox"></li>
+        <li>Ambivalent <input type="checkbox"></li>
+    </ul>
+</li>
+
+<li>
+    How satisfied were you with our service?
+    <ul>
+        <li>Very satisfied <input type="radio" name="s"></li>
+        <li>Satisfied <input type="radio" name="s"></li>
+        <li>Didn't care <input type="radio" name="s"></li>
+        <li>Dissatisfied <input type="radio" name="s"></li>
+        <li>Very dissatisfied <input type="radio" name="s"></li>
+    </ul>
+</li>
+
+<li>
+    Further comments:
+    <textarea rows="4" cols="30"></textarea>
+</li>
+
+<br>
+
+<li>
+    Bio photo:
+    <input type="file">
+</li>
+
+<li>
+    Location visited:
+    <select>
+        <option>Select location</option>
+        <option>Pune</option>
+        <option>Mumbai</option>
+        <option>Delhi</option>
+    </select>
+</li>
+
+<br>
+
+<li>
+    <input type="submit" value="submit">
+</li>
+
+</ul>
+</form>
+
+<br>
+<br>
+
+<!-- Nested List -->
+ <ol type="I">
+    <li>
+        List Item 1
+        <ol type="a">
+            <li>Nested item 1.1</li>
+            <li>Nested item 1.2</li>
+        </ol>
+    </li>
+
+    <li>
+        List Item 2
+        <ol>
+            <li>Nested item 2.1</li>
+            <li>
+                Nested item 2.2
+                <ul>
+                    <li>Nested item 2.2.1</li>
+                    <li>
+                        Nested item 2.2.2
+                        <ul type="square">
+                            <li>Nested item 2.2.2.1</li>
+                            <li>Nested item 2.2.2.2</li>
+                        </ul>
+                    </li>
+                    <li>Nested item 2.2.3</li>
+                </ul>
+            </li>
+            <li>Nested item 2.3</li>
+        </ol>
+    </li>
+
+    <li>
+        List Item 3
+        <ul>
+            <li>Nested item 3.1</li>
+            <li>Nested item 3.1</li>
+            <li>Nested item 3.1</li>
+        </ul>
+    </li>
+</ol>
+
+<dl>
+    <dt>COMP 249</dt>
+    <dd>Object-Oriented Programming II.</dd>
+
+    <dt>Soen287</dt>
+    <dd>Web Programming.</dd>
+</dl>
+
+<br>
+<br>
+
+<!-- Nested Table -->
+
+<h1>Nested Tables</h1>
+
+<table border="1">
+    <tr>
+        <th>Header column 1</th>
+        <th>Header column 2</th>
+        <th>Header column 3</th>
+        <th>Header column 4</th>
+    </tr>
+
+    <tr>
+        <td>Row 2 - Item 1</td>
+        <td>Row 2 - Item 2</td>
+
+        <td rowspan="2">
+            <h3>Row 2: Nested Table 1</h3>
+
+            <table class="nested">
+                <tr>
+                    <th>Row 1 Header</th>
+                    <td>item</td>
+                </tr>
+
+                <tr>
+                    <th>Row 2 Header</th>
+                    <td>item</td>
+                </tr>
+
+                <tr>
+                    <th>Row 2 Header</th>
+                    <td>item</td>
+                </tr>
+            </table>
+        </td>
+
+        <td>
+            Row 2 - Item 4<br>
+            A second line
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <h3>Row 3: Nested Table 2</h3>
+
+            <table class="nested">
+                <tr>
+                    <th>Row 1 Header</th>
+                    <td>item</td>
+                </tr>
+
+                <tr>
+                    <th>Row 2 Header</th>
+                    <td>item</td>
+                </tr>
+            </table>
+        </td>
+
+        <td>Row 3 - Item 2</td>
+        <td>Row 3 - Item 3</td>
+    </tr>
+
+    <tr>
+        <td>Row 4 - Item 1</td>
+        <td>Row 4 - Item 2</td>
+        <td>Row 4 - Item 3</td>
+        <td></td>
+    </tr>
+
+    <tr>
+        <td colspan="4">
+            Row 5 - Last row of outer table
+        </td>
+    </tr>
+</table>
+
+
+</body>
+</html>

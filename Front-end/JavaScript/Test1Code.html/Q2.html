@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr = [];
+        function extract (...value){
+            for(let i = 0;i < value.length;i++ ){
+                arr[i] = value[i];
+            }
+        };
+        extract(23,5,6,3,2,8,9);
+        console.log(arr)
+        arr.splice(0,1)
+        console.log(arr);
+    </script>
+</body>
+</html>

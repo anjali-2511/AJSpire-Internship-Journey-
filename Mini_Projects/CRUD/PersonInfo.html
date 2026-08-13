@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/fontawesome.min.css"
+        integrity="sha512-M5Kq4YVQrjg5c2wsZSn27Dkfm/2ALfxmun0vUE3mPiJyK53hQBHYCVAtvMYEC7ZXmYLg8DVG4tF8gD27WmDbsg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <div class="container m-3 border border-dark p-5 flex justify-content-center w-200">
+        <div class="row">
+            <div class="col-12">
+
+                <div class="col-10">
+                    <input type="hidden" id="index">
+
+                    Name: <input type="text" id="name" name="name" placeholder="Enter your name" class="form-control">
+
+                    Age: <input type="text" id="age" name="age" placeholder="Enter your age" class="form-control">
+                </div>
+
+
+                <div class="mt-4">
+                    <button type="submit" class="btn btn-primary " id="submitBtn" onclick="SubmitForm()">Submit</button>
+                </div>
+                <div class="btn btn-primary mx-5" id="updateBtn" style="display: none;" onclick="updateForm()">
+                    Update</div>
+
+
+            </div>
+            <div class="row" id="result"> </div>
+
+        </div>
+
+    </div>
+
+
+
+    <script>
+        var arr = [{ "name": "Test 1", "age": 20 },
+        { "name": "Test 2", "age": 10 }];
+        displayInfo();
+        function SubmitForm() {
+
+            var name = document.getElementById("name").value;
+            var age = parseInt(document.getElementById("age").value);
+
+
+
+            var obj = {
+                "name": name,
+                "age": age
+            }
+            arr.push(obj);
+            displayInfo();
+
+
+
+            reset()
+
+
+
+        }
+        function reset() {
+            document.getElementById("name").value = "";
+            parseInt(document.getElementById("age").value = "");
+
+        }
+
+        function displayInfo() {
+            var html = "";
+            for (var i = 0; i < arr.length; i++) {
+                let temp = "Not Eligible";
+                if (arr[i].age > 18) {
+                    temp = "Eligible";
+                }
+                html += `
+                   <div class="card border-success  p-3 m-3 col-3">
+                    <div class='d-flex justify-content-bwtween m-3'>
+                        <div>
+                            <h5 class="card-title"> ${arr[i].name}</h5>
+                            <h5 class="card-title"> ${arr[i].age}</h5>
+                            <span>${temp}</span>
+                            </div>
+                            <div>
+                                
+                                <button onclick='editForm("${arr[i].name}",${arr[i].age},${i})'  class="  btn btn-primary m-3 p-2 w-50 ">Edit</button>
+
+                                <button onclick='deleteData(${i})'  class="btn btn-primary m-3 p-2 w-40 ">Delete</button>
+
+                                 </div>
+                            </div>
+                        </div>
+                    </div>;
+ 
+
+                 
+
+ 
+                
+                 
+                 `;
+
+            }
+
+            document.getElementById("result").innerHTML = html;
+
+        }
+
+          function editForm(name, age, index) {
+                document.getElementById("name").value = name;
+                document.getElementById("age").value = age;
+                document.getElementById("index").value = index;
+                document.getElementById("submitBtn").style.display = 'none';
+                document.getElementById("updateBtn").style.display = 'block';
+
+            }
+            function updateForm() {
+                var name = document.getElementById("name").value;
+                var age = parseInt(document.getElementById("age").value);
+                var index = parseInt(document.getElementById("index").value);
+                var obj = {
+                    "name": name,
+                    "age": age,
+                };
+                arr[index] = obj;
+                reset();
+                displayInfo();
+                document.getElementById("submitBtn").style.display = 'block';
+                document.getElementById("updateBtn").style.display = 'none';
+            }
+            function deleteData(index) {
+                if (confirm("Are you sure?")) {
+                    var tempArr = arr.filter((data, i) => index != i);
+                    arr = tempArr;
+                    alert("Data Deleted!");
+                    displayInfo();
+                }
+            }
+
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>

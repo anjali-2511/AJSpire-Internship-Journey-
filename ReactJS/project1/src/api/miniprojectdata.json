@@ -1,0 +1,142 @@
+[
+  {
+    "id": 1,
+    "rollNo": "R101",
+    "name": "Aarav Sharma",
+    "course": "Computer Science",
+    "marks": 88
+  },
+  {
+    "id": 2,
+    "rollNo": "R102",
+    "name": "Priya Patel",
+    "course": "Information Technology",
+    "marks": 45
+  },
+  {
+    "id": 3,
+    "rollNo": "R103",
+    "name": "Rohan Mehta",
+    "course": "Mechanical Engineering",
+    "marks": 72
+  },
+  {
+    "id": 4,
+    "rollNo": "R104",
+    "name": "Sneha Iyer",
+    "course": "Electronics Engineering",
+    "marks": 91
+  },
+  {
+    "id": 5,
+    "rollNo": "R105",
+    "name": "Karan Verma",
+    "course": "Civil Engineering",
+    "marks": 38
+  },
+  {
+    "id": 6,
+    "rollNo": "R106",
+    "name": "Ananya Reddy",
+    "course": "Computer Science",
+    "marks": 79
+  },
+  {
+    "id": 7,
+    "rollNo": "R107",
+    "name": "Vikram Nair",
+    "course": "Information Technology",
+    "marks": 55
+  },
+  {
+    "id": 8,
+    "rollNo": "R108",
+    "name": "Ishita Joshi",
+    "course": "Electronics Engineering",
+    "marks": 95
+  },
+  {
+    "id": 9,
+    "rollNo": "R109",
+    "name": "Aditya Kulkarni",
+    "course": "Mechanical Engineering",
+    "marks": 61
+  },
+  {
+    "id": 10,
+    "rollNo": "R110",
+    "name": "Meera Desai",
+    "course": "Civil Engineering",
+    "marks": 49
+  },
+  {
+    "id": 11,
+    "rollNo": "R111",
+    "name": "Arjun Singh",
+    "course": "Computer Science",
+    "marks": 84
+  },
+  {
+    "id": 12,
+    "rollNo": "R112",
+    "name": "Kavya Rao",
+    "course": "Information Technology",
+    "marks": 67
+  },
+  {
+    "id": 13,
+    "rollNo": "R113",
+    "name": "Devansh Gupta",
+    "course": "Electronics Engineering",
+    "marks": 33
+  },
+  {
+    "id": 14,
+    "rollNo": "R114",
+    "name": "Nisha Pillai",
+    "course": "Mechanical Engineering",
+    "marks": 76
+  },
+  {
+    "id": 15,
+    "rollNo": "R115",
+    "name": "Yash Agarwal",
+    "course": "Civil Engineering",
+    "marks": 58
+  },
+  {
+    "id": 16,
+    "rollNo": "R116",
+    "name": "Riya Chatterjee",
+    "course": "Computer Science",
+    "marks": 90
+  },
+  {
+    "id": 17,
+    "rollNo": "R117",
+    "name": "Siddharth Rao",
+    "course": "Information Technology",
+    "marks": 42
+  },
+  {
+    "id": 18,
+    "rollNo": "R118",
+    "name": "Tanvi Bhatt",
+    "course": "Electronics Engineering",
+    "marks": 87
+  },
+  {
+    "id": 19,
+    "rollNo": "R119",
+    "name": "Rahul Malhotra",
+    "course": "Mechanical Engineering",
+    "marks": 53
+  },
+  {
+    "id": 20,
+    "rollNo": "R120",
+    "name": "Ananya Kapoor",
+    "course": "Civil Engineering",
+    "marks": 96
+  }
+]

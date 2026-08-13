@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    .main {
+        background: #b4afaf70;
+        height: 550px;
+        width: 1320px;
+        display: flex;
+        border: 2px solid rgb(66, 65, 65);
+    }
+
+    .left {
+        height: 328px;
+        width: 550px;
+        border: 2px solid rgb(42, 43, 42);
+        padding: 60px;
+        margin: 55px 0px 0px 20px;
+        background-color: rgba(168, 136, 114, 0.712);
+
+    }
+
+    #name {
+        margin-left: 20px;
+        padding: 8px;
+        width: 270px;
+
+
+    }
+
+    #phone {
+        margin-left: 20px;
+        margin-top: 20px;
+        padding: 8px;
+        width: 270px;
+
+
+    }
+
+    #email {
+        margin-left: 20px;
+        margin-top: 20px;
+        padding: 8px;
+        width: 270px;
+
+
+    }
+
+    span {
+        font-size: 25px;
+    }
+
+    button {
+        margin: 30px 0px 0px 120px;
+        font-size: 30px;
+        padding: 10px;
+        width: 150px;
+        border-radius: 8px;
+        color: aliceblue;
+        background-color: rgba(128, 51, 0, 0.712);
+        display: block;
+    }
+
+    .updatebtn {
+        margin: 30px 0px 0px 120px;
+        font-size: 30px;
+        padding: 10px;
+        width: 150px;
+        border-radius: 8px;
+        color: aliceblue;
+        background-color: rgba(128, 51, 0, 0.712);
+        display: none;
+
+    }
+
+
+
+    .right {
+        height: 448px;
+        width: 800px;
+        background: #927474;
+        border: 2px solid rgb(32, 32, 32);
+        margin: 55px 20px 0px 0px;
+    }
+
+    table {
+        margin: 20px 20px 0px 30px;
+        padding: 20px;
+        width: 640px;
+    }
+
+    th {
+        padding: 15px;
+        font-size: 20px;
+    }
+
+    .btn1 {
+        margin: 5px 10px 5px 10px;
+        padding: 5px;
+        font-size: 15px;
+        border-radius: 5px;
+        color: aliceblue;
+        background-color: rgba(0, 128, 0, 0.836);
+    }
+
+    .btn2 {
+        margin: 5px 10px 5px 10px;
+        padding: 5px;
+        font-size: 15px;
+        border-radius: 5px;
+        color: aliceblue;
+        background-color: rgba(255, 0, 0, 0.767);
+    }
+
+    h1 {
+        text-align: center;
+        color: rgba(83, 5, 5, 0.753);
+    }
+</style>
+
+<body>
+
+    <div>
+        <h1>CRUD (Create Read Ubdate Delete)</h1>
+        <div class="main">
+
+
+            <div class="left" style="background-image: url(Bg.png);">
+                <input type="hidden" id="index">
+                <span>Name:</span> <input type="text" name="name" id="name" /><br><br>
+
+                <span>Phone:</span> <input type="text" name="phone" id="phone" /><br><br>
+
+                <span>Email:</span> <input type="text" name="email" id="email" /><br><br>
+
+                <button id="submitBtn" type="button" onclick="formsubmit()">Submit</button>
+
+                <button class="updatebtn" id="updateBtn" onclick="updateForm()">Update</button>
+
+
+
+            </div>
+
+
+            <div class="right">
+                <table border="2">
+                    <thead>
+
+                        <tr>
+                            <th>Name</th>
+                            <th>Phone</th>
+                            <th>Email</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="result"></tbody>
+                </table>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var arr = [];
+        function formsubmit() {
+            var name = document.getElementById("name").value;
+            var phone = document.getElementById("phone").value;
+            var email = document.getElementById("email").value;
+
+
+            var obj = {
+                "name": name,
+                "phone": phone,
+                "email": email
+            }
+            arr.push(obj);
+
+
+
+            displayform();
+
+            resetform()
+
+
+        }
+
+        function resetform() {
+            document.getElementById("name").value = "";
+            document.getElementById("phone").value = "";
+            document.getElementById("email").value = "";
+
+        }
+        function displayform() {
+            var html = "";
+
+
+            for (var i = 0; i < arr.length; i++) {
+                // console.log(arr[i]);
+                html += `
+                <tr>
+                    <td>${arr[i].name}</td>
+                    <td>${arr[i].phone}</td>
+                    <td>${arr[i].email}</td>
+                    <td>
+                        <button class="btn1" onclick='editForm("${arr[i].name}","${arr[i].phone}","${arr[i].email}",${i})'>Edit</button>
+
+                        <button class="btn2" onclick='deleteData(${i})'>Delete</button>
+                    </td>
+                </tr>
+                
+                 
+                 `;
+
+            }
+
+
+
+            document.getElementById("result").innerHTML = html;
+        }
+        function editForm(name, phone, email, index) {
+            document.getElementById("name").value = name;
+            document.getElementById("phone").value = phone;
+            document.getElementById("email").value = email;
+            document.getElementById("index").value = index;
+            document.getElementById("submitBtn").style.display = 'none';
+            document.getElementById("updateBtn").style.display = 'block';
+
+        }
+        function updateForm() {
+            var name = document.getElementById("name").value;
+            var phone = parseInt(document.getElementById("phone").value);
+            var email = document.getElementById("email").value;
+            var index = parseInt(document.getElementById("index").value);
+            var obj = {
+                "name": name,
+                "phone": phone,
+                "email": email
+            };
+            arr[index] = obj;
+            resetform();
+            displayform();
+            document.getElementById("submitBtn").style.display = 'block';
+            document.getElementById("updateBtn").style.display = 'none';
+        }
+        function deleteData(index) {
+            if (confirm("Are you sure?")) {
+                var tempArr = arr.filter((data, i) => index != i);
+                arr = tempArr;
+                alert("Data Deleted!");
+                displayform();
+            }
+        }
+
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,17 @@
+let promise = new Promise(function(resolve, reject){
+    setTimeout(function(){
+        resolve("Data loaded");
+    }, 2000);
+});
+promise.then(function(data){
+    console.log(data);
+});
+
+// 5. Using async /await(modern way)
+
+async function getData(){
+    let result = await promise;
+    console.log(result);
+
+}
+getData();

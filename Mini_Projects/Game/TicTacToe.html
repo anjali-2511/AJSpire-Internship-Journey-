@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+
+        .box {
+            margin: 50px auto;
+            border-collapse: collapse;
+            width: 400px;
+            height: 400px;
+        }
+        table .one {
+            background-color: rgba(53, 146, 53, 0.699);
+
+        }
+
+        table .two {
+            background-color: rgba(53, 146, 53, 0.699);
+
+        }
+
+        table .three {
+            background-color: rgba(53, 146, 53, 0.699);
+
+        }
+
+        td {
+            padding: 40px;
+            margin: 50px;
+        }
+
+        input {
+            border: none;
+
+            width: 50px;
+            height: 25px;
+            font-size: 40px;
+            text-align: center;
+            font-weight:lighter;
+            color: rgb(83, 5, 5);
+            background-color: rgba(100, 167, 100, 0.089);
+
+
+        }
+        #resetBtn {
+            margin: 0px 0px 0px 570px;
+            padding: 10px 20px;
+            font-size: 20px;
+            background-color: rgb(83, 5, 5);
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            width: 200px;
+        }
+        h1{
+            text-align: center;
+            color: rgba(83, 5, 5, 0.753);
+        }
+        p{
+            text-align: center;
+            color: rgba(83, 5, 5, 0.76);
+            font-size: 20px;
+        }
+    </style> -->
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+ 
+        body {
+            margin: 0;
+            padding: 20px;
+        }
+
+         
+ 
+        h1 {
+            text-align: center;
+            color: rgba(83, 5, 5, 0.753);
+            font-size: clamp(24px, 6vw, 40px);
+        }
+ 
+        p {
+            text-align: center;
+            color: rgba(83, 5, 5, 0.76);
+            font-size: clamp(14px, 3vw, 20px);
+        }
+ 
+        .box {
+            margin: 30px auto;
+            border-collapse: collapse;
+            width: 90%;
+            max-width: 400px;
+            aspect-ratio: 1 / 1;
+            table-layout: fixed;
+        }
+ 
+        table .one,
+        table .two,
+        table .three {
+            background-color: rgb(7, 114, 7);
+        }
+         
+
+ 
+        td {
+            border: 1px solid #999;
+            padding: 0;
+            width: 33.33%;
+            height: 33.33%;
+        }
+ 
+        input {
+            border: none;
+            width: 100%;
+            height: 100%;
+            font-size: clamp(28px, 10vw, 60px);
+            text-align: center;
+            font-weight: lighter;
+            color: rgb(83, 5, 5);
+            background-color: rgba(20, 114, 20, 0.25);
+        }
+ 
+        input:focus {
+            outline: none;
+            /* background-color: rgb(113, 170, 113); */
+        }
+         
+ 
+        .btn-wrap {
+            display: flex;
+            justify-content: center;
+        }
+ 
+        #resetBtn {
+            margin: 20px auto 0px 60px;
+            padding: 10px 20px;
+            font-size: clamp(16px, 4vw, 20px);
+            background-color: rgb(83, 5, 5);
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            width: 90%;
+            max-width: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1> Tic Tac Toe Game</h1>
+    <p>Enter X or O in the boxes to play the game</p>
+    <table class="box" border="1">
+        <tr class="one">
+            <td><input id="v1" type="text" onkeyup="tictactoe()"></td>
+            <td><input id="v2" type="text" onkeyup="tictactoe()"></td>
+            <td><input id="v3" type="text" onkeyup="tictactoe()"></td>
+        </tr>
+
+        <tr class="two">
+            <td><input id="v4" type="text" onkeyup="tictactoe()"></td>
+            <td><input id="v5" type="text" onkeyup="tictactoe()"></td>
+            <td><input id="v6" type="text" onkeyup="tictactoe()"></td>
+        </tr>
+
+        <tr class="three">
+            <td><input id="v7" type="text" onkeyup="tictactoe()"></td>
+            <td><input id="v8" type="text" onkeyup="tictactoe()"></td>
+            <td><input id="v9" type="text" onkeyup="tictactoe()"></td>
+        </tr>
+    </table>
+
+
+    <button id="resetBtn" onclick="resetGame()">Reset</button>
+
+    <script>
+        var gameOver = false;
+
+        function tictactoe() {
+            if (gameOver){
+                alert("Game is over. Please reset the game to play again.");
+            };
+
+            var v = {};
+            for (var i = 1; i <= 9; i++) {
+                v[i] = document.getElementById("v" + i).value.toUpperCase();
+            }
+
+            var lines = [
+                [1, 2, 3], [4, 5, 6], [7, 8, 9],    
+                [1, 4, 7], [2, 5, 8], [3, 6, 9],    
+                [1, 5, 9], [3, 5, 7]                
+            ];
+
+            var winner = null;
+
+            for (var i = 0; i < lines.length; i++) {
+                var a = lines[i][0], b = lines[i][1], c = lines[i][2];
+                if (v[a] !== "" && v[a] === v[b] && v[b] === v[c]) {
+                    winner = v[a];
+                    break;
+                }
+            }
+
+            if (winner) {
+                gameOver = true;
+                setTimeout(function () {
+                    alert(winner + " Wins!");
+                }, 10);
+                return;
+            }
+
+          
+            var filled = true;
+            for (var i = 1; i <= 9; i++) {
+                if (v[i] === "") {
+                    filled = false;
+                    break;
+                }
+            }
+
+            if (filled) {
+                gameOver = true;
+                setTimeout(function () {
+                    alert("Game Over - It's a Draw");
+                }, 10);
+            }
+        }
+
+        function resetGame() {
+            for (var i = 1; i <= 9; i++) {
+                document.getElementById("v" + i).value = "";
+            }
+            gameOver = false;
+        }
+    </script>
+    var gameOver = false;
+
+    function tictactoe() {
+        if (gameOver) {
+            alert("Game is over. Please reset the game to play again.");
+            return;
+        }
+
+        var v1 = document.getElementById("v1").value.toUpperCase();
+        var v2 = document.getElementById("v2").value.toUpperCase();
+        var v3 = document.getElementById("v3").value.toUpperCase();
+        var v4 = document.getElementById("v4").value.toUpperCase();
+        var v5 = document.getElementById("v5").value.toUpperCase();
+        var v6 = document.getElementById("v6").value.toUpperCase();
+        var v7 = document.getElementById("v7").value.toUpperCase();
+        var v8 = document.getElementById("v8").value.toUpperCase();
+        var v9 = document.getElementById("v9").value.toUpperCase();
+
+        var winner = "";
+
+        if (v1 != "" && v1 == v2 && v2 == v3) {
+            winner = v1;
+        } else if (v4 != "" && v4 == v5 && v5 == v6) {
+            winner = v4;
+        } else if (v7 != "" && v7 == v8 && v8 == v9) {
+            winner = v7;
+        } else if (v1 != "" && v1 == v4 && v4 == v7) {
+            winner = v1;
+        } else if (v2 != "" && v2 == v5 && v5 == v8) {
+            winner = v2;
+        } else if (v3 != "" && v3 == v6 && v6 == v9) {
+            winner = v3;
+        } else if (v1 != "" && v1 == v5 && v5 == v9) {
+            winner = v1;
+        } else if (v3 != "" && v3 == v5 && v5 == v7) {
+            winner = v3;
+        }
+
+        if (winner != "") {
+            gameOver = true;
+            setTimeout(function () {
+                alert(winner + " Wins!");
+            }, 10);
+        } else if (v1 != "" && v2 != "" && v3 != "" && v4 != "" && v5 != "" && v6 != "" && v7 != "" && v8 != "" && v9 != "") {
+            gameOver = true;
+            setTimeout(function () {
+                alert("Game Over");
+            }, 10);
+        }
+    }
+
+    function resetGame() {
+        document.getElementById("v1").value = "";
+        document.getElementById("v2").value = "";
+        document.getElementById("v3").value = "";
+        document.getElementById("v4").value = "";
+        document.getElementById("v5").value = "";
+        document.getElementById("v6").value = "";
+        document.getElementById("v7").value = "";
+        document.getElementById("v8").value = "";
+        document.getElementById("v9").value = "";
+        gameOver = false;
+    }
+</script>
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

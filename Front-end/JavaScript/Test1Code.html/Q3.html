@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    a: <input type="number" id="a">
+    b: <input type="number" id="b">
+    c: <input type="number" id="c">
+
+    <button id="submit" onkeyup="find()">Find</button>
+
+    Result: <input type="text" id="result">
+
+    <script>
+        function find() {
+            var a = parseInt(document.getElementById("a").value);
+            var b = parseInt(document.getElementById("b").value);
+            var c = parseInt(document.getElementById("c").value);
+
+            if (a > b && a > c) {
+                if (b > c) {
+                    document.getElementById("result").value = "The second greatest number is B" ;
+                } else {
+                    document.getElementById("result").value = "The second greatest number is C" ;
+                }
+            } else if (b > a && b > c) {
+                if (a > c) {
+                    document.getElementById("result").value = "The second greatest number is A ";
+                } else {
+                    document.getElementById("result").value = "The second greatest number is  C";
+                }
+            } else if (c > a && c > b) {
+                if (a > b) {
+                    document.getElementById("result").value = "The second greatest number is A ";
+                } else {
+                    document.getElementById("result").value = "The second greatest number is B ";
+                }
+            } else {
+                document.getElementById("result").value = "There is no single second greatest number.";
+                
+            }
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/fontawesome.min.css"
+    integrity="sha512-M5Kq4YVQrjg5c2wsZSn27Dkfm/2ALfxmun0vUE3mPiJyK53hQBHYCVAtvMYEC7ZXmYLg8DVG4tF8gD27WmDbsg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+<style>
+    .btn1 {
+        margin: 5px 10px 5px 10px;
+        padding: 5px;
+        font-size: 15px;
+        width: 50px;
+        border-radius: 5px;
+        color: aliceblue;
+        background-color: rgba(0, 128, 0, 0.836);
+    }
+
+    .btn2 {
+        margin: 5px 10px 5px 10px;
+        padding: 5px;
+        font-size: 15px;
+        border-radius: 5px;
+        color: aliceblue;
+        background-color: rgba(255, 0, 0, 0.767);
+    }
+</style>
+
+<body>
+
+
+
+    <div class="container m-t-3 p-3  w-90">
+        <div class="row">
+
+            <div class="col-6 w-50">
+                <input type="hidden" id="index">
+
+                <table boder="1" class="table table-bordered border-dark ">
+                    <h3 class="p-1">BILL ENTRY</h3>
+                    <thead>
+                        <tr>
+                            <th>Product Name</th>
+                            <th><input type="text" class="form-control" id="pname"></th>
+
+                        </tr>
+                        <tr>
+                            <th>Qty</th>
+                            <th><input type="number" class="form-control" id="qty" onkeyup="Qty()"></th>
+
+                        </tr>
+                        <tr>
+                            <th>Rate</th>
+                            <th><input type="number" class="form-control" id="rate" onkeyup="Rate()">
+
+                        </tr>
+                        <tr>
+                            <th>Total</th>
+                            <th><input type="number" class="form-control" id="total" onkeyup="Total()"></th>
+
+                        </tr>
+                        <tr>
+                            <th>Dis%</th>
+                            <th><input type="number" class="form-control" id="dis" onkeyup="Dis()">
+
+                        </tr>
+                        <tr>
+                            <th>Dis Value</th>
+                            <th><input type="number" class="form-control" id="disvalue" onkeyup="DIS()"></th>
+
+                        </tr>
+                        <tr>
+                            <th>GST%</th>
+                            <th><input type="number" class="form-control" id="gst" onkeyup="Gst()"></th>
+
+                        </tr>
+                        <tr>
+                            <th>GST Value</th>
+                            <th><input type="number" class="form-control" id="gstvalue" onkeyup="GST()"></th>
+
+                        </tr>
+                        <tr>
+                            <th>Net Total</th>
+                            <th><input type="number" class="form-control" id="nettotal" onkeyup="NET()"></th>
+
+                        </tr>
+
+
+
+
+                    </thead>
+
+
+
+
+                </table>
+                <div class="btn btn-primary mx-10 w-100" id="submitBtn" onclick="SubmitForm()">
+                    Submit
+                </div>
+
+                <div class="btn btn-primary mx-5" id="updateBtn" style="display: none;" onclick="updateForm()">
+                    Update</div>
+            </div>
+
+            <div class="col-6 w-50">
+                 <table boder="1" class="table table-bordered border-dark margin-3" id="table">
+                    <thead>
+                        <tr>
+                            <th>Product Name</th>
+                            <th>Qty</th>
+                            <th>Rate</th>
+                            <th>Total</th>
+                            <th>Dis%</th>
+                            <th>Dis Value</th>
+                            <th>GST%</th>
+                            <th>GST Value</th>
+                            <th>Net Total</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="result">
+                    </tbody>
+                </table>
+
+            </div>
+
+        </div>
+
+
+
+
+    </div>
+
+
+
+
+</body>
+
+<script>
+
+    var productName = document.getElementById("pname").value;
+    var qty = Number(document.getElementById("qty").value);
+    var rate = Number(document.getElementById("rate").value);
+    var total = Number(document.getElementById("total").value);
+    var dis = Number(document.getElementById("dis").value);
+    var disValue = Number(document.getElementById("disvalue").value);
+    var gst = Number(document.getElementById("gst").value);
+    var gstValue = Number(document.getElementById("gstvalue").value);
+    var netTotal = Number(document.getElementById("nettotal").value);
+
+    function Qty() {
+        qty = Number(document.getElementById("qty").value);
+        Total();
+        Dis();
+        GST();
+        NET();
+    }
+    function Rate() {
+        rate = Number(document.getElementById("rate").value);
+        Total();
+        DIS();
+        GST();
+        NET();
+    }
+    function Dis() {
+        dis = Number(document.getElementById("dis").value);
+        DIS();
+        NET();
+    }
+    function Gst() {
+        gst = Number(document.getElementById("gst").value);
+        GST();
+        NET();
+    }
+
+    function Total() {
+        total = qty * rate;
+        Number(document.getElementById("total").value = total);
+    }
+    function DIS() {
+        disValue = (total * dis) / 100;
+        Number(document.getElementById("disvalue").value = disValue);
+    }
+    function GST() {
+        gstValue = (total * gst) / 100;
+        Number(document.getElementById("gstvalue").value = gstValue);
+    }
+    function NET() {
+        netTotal = total - disValue + gstValue;
+        Number(document.getElementById("nettotal").value = netTotal);
+    }
+
+
+
+    var arr = [];
+    function SubmitForm() {
+        var productName = document.getElementById("pname").value;
+        var qty = Number(document.getElementById("qty").value);
+        var rate = Number(document.getElementById("rate").value);
+        var total = Number(document.getElementById("total").value);
+        var dis = Number(document.getElementById("dis").value);
+        var disValue = Number(document.getElementById("disvalue").value);
+        var gst = Number(document.getElementById("gst").value);
+        var gstValue = Number(document.getElementById("gstvalue").value);
+        var netTotal = Number(document.getElementById("nettotal").value);
+
+
+
+        var obj = {
+            "productName": productName,
+            "qty": qty,
+            "rate": rate,
+            "total": total,
+            "dis": dis,
+            "disValue": disValue,
+            "gst": gst,
+            "gstValue": gstValue,
+            "netTotal": netTotal
+        }
+        arr.push(obj);
+
+
+        reset()
+
+        displayInfo();
+
+    }
+
+    function reset() {
+        document.getElementById("pname").value = "";
+        Number(document.getElementById("qty").value = "");
+        Number(document.getElementById("rate").value = "");
+        Number(document.getElementById("total").value = "");
+        Number(document.getElementById("dis").value = "");
+        Number(document.getElementById("disvalue").value = "");
+        Number(document.getElementById("gst").value = "");
+        Number(document.getElementById("gstvalue").value = "");
+        Number(document.getElementById("nettotal").value = "");
+
+    }
+    function displayInfo() {
+        var html = "";
+        for (var i = 0; i < arr.length; i++) {
+
+            html += `
+                   <tr>
+                        <td>${arr[i].productName}</td>
+                        <td>${arr[i].qty}</td>
+                        <td>${arr[i].rate}</td>
+                        <td>${arr[i].total}</td>
+                        <td>${arr[i].dis}</td>
+                        <td>${arr[i].disValue}</td>
+                        <td>${arr[i].gst}</td>
+                        <td>${arr[i].gstValue}</td>
+                        <td>${arr[i].netTotal}</td>
+                        <td>
+                            <button class="btn1" onclick='editForm("${arr[i].productName}","${arr[i].qty}","${arr[i].rate}","${arr[i].total}","${arr[i].dis}","${arr[i].disValue}","${arr[i].gst}","${arr[i].gstValue}","${arr[i].netTotal}",${i})'>Edit</button>
+
+                            <button class="btn2" onclick='deleteData(${i})'>Delete</button>
+                        </td>
+                    </tr>
+                         
+
+                     
+                    
+                    `;
+        }
+        document.getElementById("result").innerHTML = html;
+    }
+
+    function editForm(pname, qty, rate, total, dis, disvalue, gst, gstvalue, netTotal, index) {
+        document.getElementById("pname").value = pname;
+        Number(document.getElementById("qty").value = qty);
+        Number(document.getElementById("rate").value = rate);
+        Number(document.getElementById("total").value = total);
+        Number(document.getElementById("dis").value = dis);
+        Number(document.getElementById("disvalue").value = disvalue);
+        Number(document.getElementById("gst").value = gst);
+        Number(document.getElementById("gstvalue").value = gstvalue);
+        Number(document.getElementById("nettotal").value = netTotal);
+
+        document.getElementById("index").value = index;
+
+        document.getElementById("submitBtn").style.display = 'none';
+        document.getElementById("updateBtn").style.display = 'block';
+
+    }
+    function updateForm() {
+        var productName = document.getElementById("pname").value;
+        var qty = Number(document.getElementById("qty").value);
+        var rate = Number(document.getElementById("rate").value);
+        var total = Number(document.getElementById("total").value);
+        var dis = Number(document.getElementById("dis").value);
+        var disValue = Number(document.getElementById("disvalue").value);
+        var gst = Number(document.getElementById("gst").value);
+        var gstValue = Number(document.getElementById("gstvalue").value);
+        var netTotal = Number(document.getElementById("nettotal").value);
+
+        var index = Number(document.getElementById("index").value);
+
+        var obj = {
+            "productName": productName,
+            "qty": qty,
+            "rate": rate,
+            "total": total,
+            "dis": dis,
+            "disValue": disValue,
+            "gst": gst,
+            "gstValue": gstValue,
+            "netTotal": netTotal
+        };
+
+        arr[index] = obj;
+        reset();
+        displayInfo();
+        document.getElementById("submitBtn").style.display = 'block';
+        document.getElementById("updateBtn").style.display = 'none';
+    }
+    function deleteData(index) {
+        if (confirm("Are you sure?")) {
+            var tempArr = arr.filter((data, i) => index != i);
+            arr = tempArr;
+            alert("Data Deleted!");
+            displayInfo();
+        }
+    }
+
+         
+
+
+
+
+    
+
+
+
+
+
+
+
+
+</script>
+
+</html>

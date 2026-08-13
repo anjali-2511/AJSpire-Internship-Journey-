@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <script>
+        function checkEvenOdd(number) {
+             
+            if (number % 2 == 0) {
+                document.getElementById('result').value = "The number is even.";
+
+                
+            } else{
+                document.getElementById("result").value = "The number is odd";
+            }
+        }
+    </script>
+    <div class="container mt-5">
+        <div class="card p-4 shadow-sm">
+            <h4 class="mb-4">Check if a Number is Even or Odd</h4>
+            <div class="mb-3">
+                <label for="number" class="form-label">Enter a number:</label>
+                <input type="number" id="number" class="form-control" placeholder="Enter a number">
+            </div>
+            <button type="button" class="btn btn-primary w-100" onclick="checkEvenOdd()">
+                Check
+            </button>
+            <div class="mt-3">
+                <label for="result" class="form-label">Result:</label>
+                <input type="text" id="result" class="form-control" readonly>
+            </div>
+        </div>
+    </div> 
+
+    <div>
+        <tr>
+            <td>
+                Enter a Number:
+                <input type="text" value="">
+
+            </td>
+        </tr>
+        <tr>
+            <td> 
+                <button id="check" onclick="checkEvenOdd()">Check</button>
+                
+            </td>
+        </tr>
+        <tr>
+            <td> 
+                Result:
+                <input type="text" id="result" value="">
+ 
+            </td>
+        </tr>
+    </div>
+</body>
+</html>

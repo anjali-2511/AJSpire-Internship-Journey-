@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minutes to Hours Converter</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-light">
+
+    <div class="container mt-5">
+
+        <div class="row justify-content-center">
+
+            <div class="col-md-5">
+
+                <div class="card shadow-lg p-4">
+
+                    <h2 class="text-center text-primary mb-4">
+                        Minutes to Hours Converter
+                    </h2>
+
+                    <div class="mb-3">
+                        <label class="form-label fw-bold">
+                            Enter Minutes
+                        </label>
+                        <input type="number" class="form-control" id="min" placeholder="Enter Minutes">
+                    </div>
+
+                    <div class="d-grid mb-3">
+                        <button class="btn btn-success" onclick="Convert()">
+                            Convert
+                        </button>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label fw-bold">
+                            Hours
+                        </label>
+                        <input type="text" class="form-control" id="hour" readonly>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+        function Convert() {
+
+            var min = parseFloat(document.getElementById("min").value) || 0;
+
+            var hour = min / 60;
+
+            document.getElementById("hour").value = hour.toFixed(2);
+
+        }
+    </script>
+
+</body>
+
+</html>
