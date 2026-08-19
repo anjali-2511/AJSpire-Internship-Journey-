@@ -11,7 +11,7 @@ function Home() {
                 <button className="btn btn-dark border-white px-4 py-2 d-inline-flex align-items-center gap-2 m-5">Login <i class="fa-solid fa-square-up-right"  ></i></button>
 
                 <div className="card flex-row bg-dark border-dark gap-5 m-3">
-                    <div className="card bg-dark text-white border-secondary w-25 h-25 ms-5 me-5 p-4 mb-5">
+                    <div className="card bg-dark text-white border-secondary w-25 h-25 ms-5 me-5 p-4 ">
                         <i class="fa-solid fa-user" ></i>
                         <h3>Quick Registration</h3>
                         <p>Name and phone, verified by OTP.</p>
@@ -23,7 +23,7 @@ function Home() {
 
                         </p>
                     </div>
-                    <div className="card bg-dark text-white border-secondary w-25 h-25 ms-5 me-5 p-3 mb-4">
+                    <div className="card bg-dark text-white border-secondary w-25 h-25 ms-5 me-5 p-3">
                         <i class="fa-solid fa-pen-to-square"></i>
                         <h3>Editable dashboard</h3>
                         <p>Update your details anytime, pass stays in sync.</p>
