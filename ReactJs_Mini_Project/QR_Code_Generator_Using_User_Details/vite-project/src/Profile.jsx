@@ -14,19 +14,41 @@ function Profile() {
 
                     <div className=" d-flex w-100 m-3">
                         <button className="btn btn-border-secondary border rounded-circle d-flex justify-content-center align-items-center mt-3 p-4 me-3">
-                               <i class="fa-regular fa-camera"></i>
+                            <i class="fa-regular fa-camera"></i>
                         </button>
                         <div className="d-flex flex-column   justify-content-center align-items-center">
-                            
+
                             <span className="fw-bold">Add a profile photo</span>
                             <span>Helps your QR pass feel personal.</span>
+                        </div>
+                    </div>
+
+                    <div>
+
+                        <span className="pb-2">Full Name:</span>
+                        <input type="text" placeholder="Enter a Name" className="form-control border-primary bg-secondary mb-3" />
+
+                        <span className="pb-2">Phone Number:</span>
+                        <input type="text" placeholder="xxxxxxxx" className="form-control border-primary bg-secondary mb-3" />
+
+                        <span className="pb-2">Email:</span>
+                        <input type="text" placeholder="abc@123" className="form-control border-primary bg-secondary mb-3" />
+
+                        <span className="pb-2">Address:</span>
+                        <input type="text" placeholder="City,State" className="form-control border-primary bg-secondary mb-3" />
+
+                        <div className="d-flex justify-content-center"> <button className="btn btn-primary m-3 border-secondary w-50  ">Save and Continue</button>
                         </div>
                     </div>
 
 
 
                 </div>
+
+
+
             </div>
+
 
         </>
     )

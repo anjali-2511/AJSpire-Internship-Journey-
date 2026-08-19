@@ -5,7 +5,7 @@ function NavBar() {
             <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top border rounded-3 border-primary">
 
                 <a className="navbar-brand fw-bold " href="#">
-                    <img src={logo} alt="" width="250" height="80" />
+                    <img src={logo} alt="" width="150" height="80" />
                 </a>
 
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -20,18 +20,14 @@ function NavBar() {
                             <a className="nav-link active" href="#">Home</a>
                         </li>
 
-                        {/* <li className="nav-item">
-                            <a className="nav-link" href="#">Registration</a>
-                        </li> */}
-
-                        <li className="nav-item ms-5 me-5">
+                        <li className="nav-item ms-5 me-5 ">
                             <a className="nav-link" href="#">DashBoard</a>
                         </li>
 
-                        <li className=" nav-item ms-5 me-5">
+                        <li className=" nav-item  ms-5 me-5">
                             <a className="nav-link" href="#">Login</a>
                         </li>
-                        <li className=" nav-item ms-5 me-5">
+                        <li className=" nav-item  ms-5 me-5">
                             <a className="nav-link" href="#">Profile</a>
                         </li>
                     </ul>
