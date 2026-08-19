@@ -1,3 +1,4 @@
+import Home from "./Home"
 import NavBar from "./NavBar"
 
 function App() {
@@ -6,6 +7,12 @@ function App() {
   return (
     <>
        <NavBar/>
+       <br />
+       <br />
+       
+       
+        
+       <Home/>
 
     </>
   )
