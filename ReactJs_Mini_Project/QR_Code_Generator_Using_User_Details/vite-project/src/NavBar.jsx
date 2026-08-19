@@ -2,7 +2,7 @@ import logo from "../public/project_logo.png"
 function NavBar() {
     return (
         <>
-            <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top border rounded-3">
+            <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top border rounded-3 border-primary">
 
                 <a className="navbar-brand fw-bold " href="#">
                     <img src={logo} alt="" width="250" height="80" />
@@ -31,10 +31,13 @@ function NavBar() {
                         <li className=" nav-item ms-5 me-5">
                             <a className="nav-link" href="#">Login</a>
                         </li>
+                        <li className=" nav-item ms-5 me-5">
+                            <a className="nav-link" href="#">Profile</a>
+                        </li>
                     </ul>
 
                     <div className="nav-item ms-auto">
-                        <button class="btn btn-dark border-white px-4 py-2 d-inline-flex align-items-center ms-5 me-5">
+                        <button class="btn btn-dark border-white px-4 py-2 d-inline-flex align-items-center ">
                             Sign up <i class="fa-solid fa-square-up-right" ></i>
                         </button>
                     </div>

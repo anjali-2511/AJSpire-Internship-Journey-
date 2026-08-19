@@ -8,11 +8,11 @@ function Registration() {
                     <h1 className="text-center">Create your acoount</h1>
                     <p className="text-center">We'll send a code to verify your number.</p>
 
-                    <span> Full Name: </span>
-                    <input type="text" placeholder="Enter a Name" className="form-control border-secondary mb-3" />
+                    <span className="p-2"> Full Name: </span>
+                    <input type="text" placeholder="Enter a Name" className="form-control border-primary bg-secondary mb-2" />
 
-                    <span className="">Phone Number:</span>
-                    <input type="text" placeholder="xxxxxxxx" className="form-control border-secondary" />
+                    <span className="p-2">Phone Number:</span>
+                    <input type="text" placeholder="xxxxxxxx" className="form-control border-primary bg-secondary" />
 
                     <div className="d-flex justify-content-center"> <button className="btn btn-primary mt-3 border-secondary w-50  ">Send OTP</button>
                     </div>

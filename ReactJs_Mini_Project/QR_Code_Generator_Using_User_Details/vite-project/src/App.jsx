@@ -1,4 +1,5 @@
 import Home from "./Home"
+import Login from "./Login"
 import NavBar from "./NavBar"
 import Registration from "./Registration"
 
@@ -12,10 +13,8 @@ function App() {
        <br />
    
        <Home/>
-        
-        
-    
        <Registration/>
+       <Login/>
 
     </>
   )
