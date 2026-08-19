@@ -18,6 +18,7 @@ import ToggleSwitchApp from "./ToggleSwitch/ToggleSwitchApp"
 import UseRef from "./Basic_Content/UseRef";
 import MiniProject from "./Student_Directory/StudentMarksSearcher";
 import UserSearch from "./GitHub_Style_User_Search/UserSearch";
+import Registration from "./RegistrationForm/Registration";
 
 
 
@@ -57,6 +58,7 @@ function App() {
       <UseRef/>
       <MiniProject/>
       <UserSearch/>
+      <Registration/>
 
     </div>
   )
