@@ -1,4 +1,5 @@
 function Home() {
+    function 
     return (
         <>
             <div className="bg-dark text-center vh-50 border rounded mt-5">
@@ -7,7 +8,7 @@ function Home() {
                 <h3 className="text-white"> Register once, carry your pass everywhere</h3>
                 <p className="text-white"> Sign up with your phone number, verify with an OTP, and get a personal QR pass you can download or print anytime.</p>
 
-                <button className="btn btn-primary m-5 px-4 py-2">Get Started <i class="fa-solid fa-square-up-right"  ></i></button>
+                <button className="btn btn-primary m-5 px-4 py-2"  >Get Started <i class="fa-solid fa-square-up-right"></i></button>
                 <button className="btn btn-dark border-white px-4 py-2 d-inline-flex align-items-center  m-5">Login <i class="fa-solid fa-square-up-right"  ></i></button>
 
                 <div className="card flex-row bg-dark border-dark gap-5 m-3">
