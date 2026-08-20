@@ -9,12 +9,12 @@ function Profile() {
                         <span>50%</span>
                     </div>
                     <div className="progress progress-bar bg-secondary progress-bar-striped progress-bar-animated" role="progressbar" aria-label="Profile completion" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" aria-valuetext="50%" aria-busy="false">
-                        <span class="progress-bar progress-bar-striped progress-bar-animated w-50">50%</span>
+                        <span className="progress-bar progress-bar-striped progress-bar-animated w-50">50%</span>
                     </div>
 
                     <div className=" d-flex w-100 m-3">
                         <button className="btn btn-border-secondary border rounded-circle d-flex justify-content-center align-items-center mt-3 p-4 me-3">
-                            <i class="fa-regular fa-camera"></i>
+                            <i className="fa-regular fa-camera"></i>
                         </button>
                         <div className="d-flex flex-column   justify-content-center align-items-center">
 

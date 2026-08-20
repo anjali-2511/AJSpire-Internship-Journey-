@@ -17,7 +17,7 @@ function Registration() {
                     <div className="d-flex justify-content-center"> <button className="btn btn-primary mt-3 border-secondary w-50  ">Send OTP</button>
                     </div>
 
-                    <div className="d-flex justify-content-center"> <button className="btn btn-dark border-secondary px-4 py-2 w-50 gap-2 mt-2">Verify and continue<i class="fa-solid fa-square-up-right"></i></button>
+                    <div className="d-flex justify-content-center"> <button className="btn btn-dark border-secondary px-4 py-2 w-50 gap-2 mt-2">Verify and continue<i className="fa-solid fa-square-up-right"></i></button>
                     </div>
                     <p className="text-center">Already have an account? <span className="text-primary">Log in</span></p>
 

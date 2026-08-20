@@ -18,7 +18,7 @@ function DashBoard() {
                             <span className="text-secondary ps-3">Email</span>
                             <h4 className="p-3">anjali@123</h4>
 
-                            <div className="d-flex ms-2"> <button className="btn btn-dark border-primary w-100 gap-2 mt-2"> <i class="fa-regular fa-pen-to-square"></i> Edit</button>
+                            <div className="d-flex ms-2"> <button className="btn btn-dark border-primary w-100 gap-2 mt-2"> <i className="fa-regular fa-pen-to-square"></i> Edit</button>
                             </div>
 
 
@@ -31,8 +31,8 @@ function DashBoard() {
                                 </div>
 
                             <div className="w-100  mt-4"> 
-                                <button className="btn btn-primary px-4 py-2 mt-3 me-3 pe-auto ps-auto w-25"><i class="fa-solid fa-download"></i>Download</button>
-                                <button className="btn btn-dark border-white px-4 py-2   text-center mt-3 w-25 ms-auto"><i class="fa-solid fa-print" ></i> Print</button>
+                                <button className="btn btn-primary px-4 py-2 mt-3 me-3 pe-auto ps-auto w-25"><i className="fa-solid fa-download"></i>Download</button>
+                                <button className="btn btn-dark border-white px-4 py-2   text-center mt-3 w-25 ms-auto"><i className="fa-solid fa-print" ></i> Print</button>
                             </div>
 
 

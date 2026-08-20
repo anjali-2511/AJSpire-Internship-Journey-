@@ -14,7 +14,7 @@ function Login() {
                     <div className="d-flex justify-content-center"> <button className="btn btn-primary mt-3 border-secondary w-50  ">Send OTP</button>
                     </div>
 
-                    <div className="d-flex justify-content-center"> <button className="btn btn-dark border-secondary px-4 py-2 w-50 gap-2 mt-2">Login<i class="fa-solid fa-square-up-right"></i></button>
+                    <div className="d-flex justify-content-center"> <button className="btn btn-dark border-secondary px-4 py-2 w-50 gap-2 mt-2">Login<i className="fa-solid fa-square-up-right"></i></button>
                     </div>
                     <p className="text-center">New here?<span className="text-primary">Create an account</span></p>
 
