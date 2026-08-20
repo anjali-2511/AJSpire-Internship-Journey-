@@ -34,7 +34,7 @@ function NavBar() {
 
                     <div className="nav-item ms-auto">
                         <button className="btn btn-dark border-white px-4 py-2 d-inline-flex align-items-center ">
-                            Sign up <i className="fa-solid fa-square-up-right" ></i>
+                            Sign up  <i className="fa-solid fa-square-up-right" ></i>
                         </button>
                     </div>
 

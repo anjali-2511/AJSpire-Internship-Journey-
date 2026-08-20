@@ -1,9 +1,9 @@
-import { useNavigate } from "react-router-dom";
+ 
 
 function Home() {
-    const navigate = useNavigate();
-    function HandleGetStarted() {
-        navigate("/register");
+     
+    function HandleGetStarted(){
+         
     };
 
 
@@ -16,7 +16,7 @@ function Home() {
                 <p className="text-white"> Sign up with your phone number, verify with an OTP, and get a personal QR pass you can download or print anytime.</p>
 
                 <button className="btn btn-primary m-5 px-4 py-2" onClick={HandleGetStarted}>Get Started <i className="fa-solid fa-square-up-right"></i></button>
-                <button className="btn btn-dark border-white px-4 py-2 d-inline-flex align-items-center  m-5" onClick={() => navigate("/login")}>Login <i className="fa-solid fa-square-up-right"  ></i></button>
+                <button className="btn btn-dark border-white px-4 py-2 d-inline-flex align-items-center  m-5">Login <i className="fa-solid fa-square-up-right"  ></i></button>
 
                 <div className="card flex-row bg-dark border-dark gap-5 m-3">
                     <div className="card bg-dark text-white border-secondary w-25 h-25 ms-5 me-5 p-4 ">

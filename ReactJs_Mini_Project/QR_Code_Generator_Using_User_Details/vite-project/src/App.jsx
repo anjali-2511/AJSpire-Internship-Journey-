@@ -14,17 +14,15 @@ function App() {
       <NavBar />
       <br />
       <br />
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/" element={<Registration />} />
-          <Route path="/" element={<Login />} />
-          <Route path="/" element={<Profile />} />
-          <Route path="/" element={<DashBoard />} />
-          <Route path="/" element={<Profile />} />
-          <Route path="/" element={<DashBoard />} />
-        </Routes>
-      </BrowserRouter>
+       
+          <Home />
+          <Registration />
+          <Login />
+          <Profile />
+          <DashBoard />
+         
+          
+         
 
 
 
