@@ -1,5 +1,9 @@
+import { Link } from "react-router-dom";
 import logo from "../public/project_logo.png"
+import { useNavigate } from "react-router-dom";
 function NavBar() {
+    const navigate = useNavigate();
+
     return (
         <>
             <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top border rounded-3 border-primary">
@@ -17,23 +21,23 @@ function NavBar() {
                     <ul className="navbar-nav align-items-lg-center ">
 
                         <li className="nav-item  ms-5 me-5">
-                            <a className="nav-link active" href="#">Home</a>
+                            <Link className="nav-link active" to="/">Home</Link>
                         </li>
 
                         <li className="nav-item ms-5 me-5 ">
-                            <a className="nav-link" href="#">DashBoard</a>
+                            <Link className="nav-link" to="/dashboard">DashBoard</Link>
                         </li>
 
                         <li className=" nav-item  ms-5 me-5">
-                            <a className="nav-link" href="#">Login</a>
+                            <Link to="/login" className="nav-link">Login</Link>
                         </li>
                         <li className=" nav-item  ms-5 me-5">
-                            <a className="nav-link" href="#">Profile</a>
+                            <Link className="nav-link" to="/profile">Profile</Link>
                         </li>
                     </ul>
 
                     <div className="nav-item ms-auto">
-                        <button className="btn btn-dark border-white px-4 py-2 d-inline-flex align-items-center ">
+                        <button onClick={()=>navigate("/registration")}  className="btn btn-dark border-white px-4 py-2 d-inline-flex align-items-center ">
                             Sign up  <i className="fa-solid fa-square-up-right" ></i>
                         </button>
                     </div>

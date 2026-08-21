@@ -1,8 +1,8 @@
 function Profile() {
     return (
         <>
-            <div className="bg-dark vh-50 border rounded d-flex justify-content-center p-2">
-                <div className="card bg-dark ms-5 text-white border-secondary w-50 h-50 mt-5 ps-5 pe-5 m-5">
+            <div className="bg-dark vh-50 border rounded d-flex justify-content-center p-2 pt-5">
+                <div className="card bg-dark ms-5 text-white border-secondary w-50 h-100 ps-5 pe-5 m-5 mt-5">
 
                     <div className="d-flex justify-content-between w-100 mt-2">
                         <span>Profile completion</span>

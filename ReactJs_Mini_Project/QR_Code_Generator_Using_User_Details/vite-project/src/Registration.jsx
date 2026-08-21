@@ -3,7 +3,7 @@ function Registration() {
     return (
         <>
             <div className="bg-dark vh-50 border rounded d-flex justify-content-center p-5">
-                <div className="card bg-dark ms-5 text-white border-secondary w-50 h-50 mt-2 ps-5 pe-5">
+                <div className="card bg-dark ms-5 text-white border-secondary w-50 h-50 mt-5 mb-3 ps-5 pe-5">
                     <div className="d-flex justify-content-center"> <img src={logo} alt="" width="250" height="80"/></div>
                     <h1 className="text-center">Create your acoount</h1>
                     <p className="text-center">We'll send a code to verify your number.</p>

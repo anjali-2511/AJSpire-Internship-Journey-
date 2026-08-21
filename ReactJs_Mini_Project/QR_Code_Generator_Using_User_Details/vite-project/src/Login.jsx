@@ -2,7 +2,7 @@ import logo from "../public/project_logo.png"
 function Login() {
     return (
         <>
-            <div className="bg-dark vh-50 border rounded d-flex justify-content-center p-5">
+            <div className="bg-dark vh-50 border rounded d-flex justify-content-center p-5 pt-5">
                 <div className="card bg-dark ms-5 text-white border-secondary w-50 h-50 mt-5 ps-5 pe-5 m-5">
                     <div className="d-flex justify-content-center"> <img src={logo} alt="" width="250" height="80" /></div>
                     <h1 className="text-center">Welcome back</h1>

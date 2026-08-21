@@ -3,7 +3,7 @@ function DashBoard() {
     return (
         <>
             <div className="bg-dark vh-100  border rounded d-flex justify-content-center">
-                <div className="card bg-dark ms-5 text-white border-0 w-100 h-100  d-flex flex-column">
+                <div className="card bg-dark ms-5 text-white border-0 w-100 h-100  d-flex flex-column mt-3">
 
                     <div className="card flex-row bg-dark border-dark gap-5 m-3">
 
@@ -28,7 +28,7 @@ function DashBoard() {
 
                         </div>
 
-                        <div className="card bg-black text-center text-white border-secondary w-100 h-100 ms-5 me-5 mt-4">
+                        <div className="card bg-black text-center text-white border-secondary w-100 h-75 ms-5 me-5 mt-5 p-3">
                             <h3 className="pt-1">QR Code</h3>
                             <div className="card bg-white justify-content-center w-50 h-50 mt-2 ms-auto me-auto border border-primary"> 
                                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/QR_code_for_mobile_English_Wikipedia.svg/250px-QR_code_for_mobile_English_Wikipedia.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail" alt="" width="100%" height="100%"/>
@@ -36,7 +36,7 @@ function DashBoard() {
 
                             <div className="w-100  mt-4"> 
                                 <button className="btn btn-primary px-4 py-2 mt-3 me-3 pe-auto ps-auto w-50"><i className="fa-solid fa-download"></i>Download</button>
-                                <button className="btn btn-dark border-white px-4 py-2   text-center mt-2 w-50  ms-auto me-2"><i className="fa-solid fa-print" ></i> Print</button>
+                                <button className="btn btn-dark border-white px-4 py-2   text-center mt-2 w-50 mb-5 ms-auto me-2"><i className="fa-solid fa-print" ></i> Print</button>
                             </div>
 
 
