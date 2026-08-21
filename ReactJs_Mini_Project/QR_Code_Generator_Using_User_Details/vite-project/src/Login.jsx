@@ -1,5 +1,19 @@
-import logo from "../public/project_logo.png"
+import { Link, useNavigate } from "react-router-dom";
+import logo from "../public/project_logo.png";
+import { useState } from "react";
 function Login() {
+    const [phone, setPhone] = useState("+" + "91")
+    const [showOtp, setShowOtp] = useState(false);
+
+    const navigate = useNavigate()
+    const loged = () => {
+        if (phone === "" || showOtp === "") {
+            alert("Enter a Valid OTP")
+        } else {
+            alert("Valid...")
+            navigate("/profile");
+        }
+    }
     return (
         <>
             <div className="bg-dark vh-50 border rounded d-flex justify-content-center p-5 pt-5">
@@ -7,16 +21,30 @@ function Login() {
                     <div className="d-flex justify-content-center"> <img src={logo} alt="" width="250" height="80" /></div>
                     <h1 className="text-center">Welcome back</h1>
                     <p className="text-center">Log in with your registered number.</p>
-                      
+
                     <span className="pb-2">Phone Number:</span>
-                    <input type="text" placeholder="xxxxxxxx" className="form-control border-primary bg-secondary" />
+                    <input type="text" value={phone} onChange={(e) => {
+                        setPhone(e.target.value)
+                    }} placeholder="xxxxxxxx" className="form-control border-primary bg-secondary" />
 
-                    <div className="d-flex justify-content-center"> <button className="btn btn-primary mt-3 border-secondary w-50  ">Send OTP</button>
-                    </div>
+                    {showOtp ? (
 
-                    <div className="d-flex justify-content-center"> <button className="btn btn-dark border-secondary px-4 py-2 w-50 gap-2 mt-2">Login<i className="fa-solid fa-square-up-right"></i></button>
+                        <input type="text" name="" id="" placeholder="Enter a valid OTP" className="form-control border-primary bg-secondary mb-2 mt-2" />
+
+                    ) : (
+
+                        <button onClick={() => setShowOtp(true)} className="sendotp btn btn-primary mt-3 border-secondary w-50  ms-auto me-auto">
+                            Send OTP
+                        </button>)
+
+                    }
+
+                    <div className="d-flex justify-content-center">
+                        <button onClick={() => loged()} className="btn btn-dark border-secondary px-4 py-2 w-50 gap-2 mt-2">Login<i className="fa-solid fa-square-up-right"></i></button>
                     </div>
-                    <p className="text-center">New here?<span className="text-primary">Create an account</span></p>
+                    <p className="text-center">New here?
+                        <Link className="text-primary" to="/registration">Create an account</Link>
+                    </p>
 
 
                 </div>
