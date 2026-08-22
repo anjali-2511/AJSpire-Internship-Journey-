@@ -1,16 +1,18 @@
 import { useNavigate } from "react-router-dom";
 
-function DashBoard({ profile, setProfile }) {
+function DashBoard({ profile, setProfile, setIsEditing }) {
     const navigate = useNavigate();
 
     const handleEditClick = () => {
-        navigate("/profile");  
+        setIsEditing(true);
+        navigate("/profile");
     };
 
     const handleDelete = () => {
         const confirmDelete = window.confirm("Are you sure you want to delete your profile?");
         if (confirmDelete) {
             setProfile({ name: "", phone: "", email: "", address: "" });
+            setIsEditing(false);
             navigate("/profile");
         }
     };

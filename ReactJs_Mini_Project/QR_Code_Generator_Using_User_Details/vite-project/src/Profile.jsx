@@ -1,13 +1,13 @@
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
-function Profile({ profile, setProfile }) {
+
+function Profile({ profile, setProfile, isEditing, setIsEditing }) {
     const navigate = useNavigate();
 
     const handleChange = (e) => {
         const { name, value } = e.target;
         setProfile({ ...profile, [name]: value });
     };
-    const [isEditing, setIsEditing] = useState(false);
+
     const handleSubmit = () => {
         if (
             profile.name === "" ||
@@ -18,6 +18,7 @@ function Profile({ profile, setProfile }) {
             alert("Fill the Details");
         } else {
             alert(isEditing ? "Profile updated!" : "Profile saved!");
+            setIsEditing(true);
             navigate("/dashboard");
         }
     };
@@ -95,18 +96,13 @@ function Profile({ profile, setProfile }) {
                         />
 
                         <div onClick={handleSubmit} className="d-flex justify-content-center">
-                            <button
-                                onClick={(e) => isEditing(e.target.value)}
-                                className="sendotp btn btn-primary mt-3 border-secondary w-50 ms-auto me-auto"
-                            >
+                            <button className="save btn btn-primary mt-3 border-secondary w-50 ms-auto me-auto">
                                 {isEditing ? (
                                     <>
-                                        <i className="fa-solid fa-pen-nib" onClick={() => setIsEditing(true)} ></i> Update
+                                        <i className="fa-solid fa-pen-nib"></i> Update
                                     </>
                                 ) : (
-                                     
                                     "Save and Continue"
-                                    
                                 )}
                             </button>
                         </div>
