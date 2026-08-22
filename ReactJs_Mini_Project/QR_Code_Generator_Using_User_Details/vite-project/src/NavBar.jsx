@@ -24,13 +24,14 @@ function NavBar() {
                             <Link className="nav-link active" to="/">Home</Link>
                         </li>
 
-                        <li className="nav-item ms-5 me-5 ">
-                            <Link className="nav-link" to="/dashboard">DashBoard</Link>
-                        </li>
-
                         <li className=" nav-item  ms-5 me-5">
                             <Link to="/login" className="nav-link">Login</Link>
                         </li>
+
+                         <li className="nav-item ms-5 me-5 ">
+                            <Link className="nav-link" to="/dashboard">DashBoard</Link>
+                        </li>
+                        
                         <li className=" nav-item  ms-5 me-5">
                             <Link className="nav-link" to="/profile">Profile</Link>
                         </li>

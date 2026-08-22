@@ -4,7 +4,6 @@ import { useState } from "react";
 function Registration() {
     const [name, setName] = useState("");
     const [phone, setPhone] = useState("+" + 91);
-    
 
     const navigate = useNavigate()
     const verify = () => {
@@ -17,6 +16,7 @@ function Registration() {
 
 
     }
+
 
 
 
@@ -38,7 +38,7 @@ function Registration() {
                         setPhone(e.target.value)
                     }} placeholder="xxxxxxxx" className="form-control border-primary bg-secondary" />
 
-                     
+
 
                     <div className="d-flex justify-content-center">
                         <button onClick={() => verify()} className="btn btn-dark border-secondary px-4 py-2 w-50 gap-2 mt-2">Register<i className="fa-solid fa-square-up-right"></i></button>
