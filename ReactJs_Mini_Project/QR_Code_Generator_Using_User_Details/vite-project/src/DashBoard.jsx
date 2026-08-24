@@ -1,7 +1,13 @@
 import { useNavigate } from "react-router-dom";
+import QRCode from "react-qr-code";
 
 function DashBoard({ profile, setProfile, setIsEditing }) {
     const navigate = useNavigate();
+
+    const qrValue = `Name: ${profile.name}
+Phone: ${profile.phone}
+Email: ${profile.email}
+Address: ${profile.address}`;
 
     const handleEditClick = () => {
         setIsEditing(true);
@@ -50,17 +56,15 @@ function DashBoard({ profile, setProfile, setIsEditing }) {
                             </div>
                         </div>
 
-                        <div className="card bg-black text-center text-white border-secondary w-100 h-75 ms-5 me-5 mt-5 p-3">
-                            <h3 className="pt-1">QR Code</h3>
-                            <div className="card bg-white justify-content-center w-50 h-50 mt-2 ms-auto me-auto border border-primary">
-                                <img
-                                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/QR_code_for_mobile_English_Wikipedia.svg/250px-QR_code_for_mobile_English_Wikipedia.svg.png"
-                                    alt=""
-                                    width="100%"
-                                    height="100%"
-                                />
+                        <div className="card bg-black text-center text-white border-secondary w-100 h-75 ms-5 me-5 mt-5 p-5 pt-2">
+                            <h3 className="">QR Code</h3>
+                            
+                            <div
+                                className="card bg-white justify-content-center align-items-center mt-1 ms-auto me-auto border border-primary p-3"
+                                style={{ width: "220px", height: "220px" }} >
+                                <QRCode id="profile-qr-svg" value={qrValue} size={300} />
                             </div>
-                            <div className="w-100 mt-4">
+                            <div className="w-100 mt-2">
                                 <button className="btn btn-primary px-4 py-2 mt-3 me-3 pe-auto ps-auto w-50">
                                     <i className="fa-solid fa-download"></i> Download
                                 </button>
