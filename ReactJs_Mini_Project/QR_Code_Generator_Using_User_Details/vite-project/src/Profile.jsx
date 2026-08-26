@@ -95,7 +95,7 @@ function Profile({ profile, setProfile, isEditing, setIsEditing }) {
                             className="form-control border-primary bg-secondary mb-3"
                         />
 
-                        <div onClick={handleSubmit} className="d-flex justify-content-center">
+                        <div onClick={handleSubmit} className="d-flex justify-content-center mb-3">
                             <button className="save btn btn-primary mt-3 border-secondary w-50 ms-auto me-auto">
                                 {isEditing ? (
                                     <>
