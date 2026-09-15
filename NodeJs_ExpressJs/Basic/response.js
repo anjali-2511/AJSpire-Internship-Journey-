@@ -5,6 +5,8 @@ app.listen(3000, ()=>{
     console.log('Successfully Connected on port 3000.')
 })
 
+// Response:
+
 app.set('view engine', 'ejs')
 
 app.get('/', (req, res) => {
@@ -33,4 +35,11 @@ app.get('/download', (req, res) => {
 })
 app.get('/sendfile', (req, res) => {
     res.sendFile(__dirname + '/files/01 React JS Practical Task 1.pdf')
+})
+
+// Request:
+app.use(express.json())
+
+app.post('/home', (req,res) =>  {
+     res.send(req.body)
 })
