@@ -22,8 +22,32 @@
             <span>There is no message.</span>
             <% } %>
 
-    
 
+
+
+                <ul>
+                    <% items.forEach(item=> { %>
+                        <li>
+                            <%= item _%>
+                        </li>
+                        <% }) %>
+                </ul>
+
+                <table border="'1" width="500px">
+                    <% objects.forEach(object=> { %>
+                        <tr>
+                            <td>
+                                <%= object.name _%>
+                            </td>
+                            <td>
+                                <%= object.color _%>
+                            </td>
+                            <td>
+                                <%= object.bg _%>
+                            </td>
+                        </tr>
+                        <% }) %>
+                </table>
 </body>
 
 </html>

@@ -11,7 +11,14 @@ app.get('/', (req,res)=>{
 })
 
 app.get('/about', (req,res)=>{
-    res.render("about", {title:'About page', message:" Welcome"})
+    let items=['Apple', 'Banana' , 'Cherry' , 'Orange']
+    let fruits = [
+            { name: "Apple", color: "Red", bg: "Red"},
+            { name: "Banana", color: "Yellow", bg: "Red" },
+            { name: "Grape", color: "Purple", bg: "Red" },
+            { name: "Orange", color: "Orange", bg: "Red" }
+        ];
+    res.render("about", {title:'About page', message:" Welcome" , items, objects:fruits})
 })
 
 
