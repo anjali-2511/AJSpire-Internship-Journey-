@@ -9,15 +9,15 @@ app.use(express.static('public'))
 // Routes:
 
 app.get('/', (req, res) =>{
-
+    res.render('home')
 })
 
 app.get('/show-contact', (req, res) =>{
-    
+   res.render('show-contact') 
 })
 
 app.get('/add-contact', (req, res) =>{
-    
+    res.render('add-contact')
 })
 
 app.post('/add-contact', (req, res) =>{
@@ -25,7 +25,7 @@ app.post('/add-contact', (req, res) =>{
 })
 
 app.get('/update-contact', (req, res) =>{
-    
+    res.render('update-contact')
 })
 
 app.post('/update', (req, res) =>{
